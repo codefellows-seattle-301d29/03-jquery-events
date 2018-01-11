@@ -88,9 +88,17 @@ articleView.setTeasers = function() {
   // Ideally, we'd attach this as just one event handler on the #articles section, and let it process (in other words... delegate) any .read-on clicks that happen within child nodes.
   $('#articles').on('click', '.read-on', function () {
     $(this).prev().children().show();
-    $(this).hide();
+    $(this).text('Show less');
+    $(this).addClass('read-less');
+    $(this).removeClass('read-on');
   });
-  
+
+  $('#articles').on('click', '.read-less', function() {
+    $(this).prev().children(':nth-of-type(n+2)').hide();
+    $(this).text('Read more');
+    $(this).addClass('read-on');
+    $(this).removeClass('read-less');
+  });
 };
 
 // TODO: Call all of the above functions, once we are sure the DOM is ready.
