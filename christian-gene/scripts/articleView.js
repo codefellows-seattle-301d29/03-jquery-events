@@ -18,8 +18,8 @@ articleView.populateFilters = function() {
 
       // DONE: Refactor this concatenation using a template literal.
       // optionTag = '<option value="' + authorName + '">' + authorName + '</option>';
-      optionTag = `<option value=${authorName}>${authorName}</option>`;
-
+      optionTag = `<option value= "${authorName}"> ${authorName} </option>`;
+      
       if ($('#author-filter option[value="' + authorName + '"]').length === 0) {
         $('#author-filter').append(optionTag);
       }
@@ -29,7 +29,7 @@ articleView.populateFilters = function() {
       category = $(this).attr('data-category');
 
       // DONE: Refactor this concatenation using a template literal.
-      optionTag = `<option value=${category}>${category}</option>`;
+      optionTag = `<option value= "${category}"> ${category}</option>`;
 
       if ($('#category-filter option[value="' + category + '"]').length === 0) {
         $('#category-filter').append(optionTag);
@@ -47,10 +47,11 @@ articleView.handleAuthorFilter = function() {
       $('article').hide();
       console.log($('article'));
       console.log($(this).val());
-      $('article[data-author="' + $(this).val() + '"']).fadeIn(slow);
+      $('article[data-author="' + $(this).val() + '"]').fadeIn('slow');
 
     } else {
       // TODO: If the <select> menu was changed to an option that is blank, we should first show all the articles, except the one article we are using as a template.
+      
 
     }
     $('#category-filter').val('');
