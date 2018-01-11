@@ -19,6 +19,7 @@ articleView.populateFilters = function() {
       if ($('#author-filter option[value="' + authorName + '"]').length === 0) {
         $('#author-filter').append(optionTag);
       }
+      console.log('x', x);
 
       // REVIEW: Similar to the above, but...
       // Avoid duplicates! We don't want to append the category name if the <select> already has this category as an option!
@@ -41,11 +42,12 @@ articleView.handleAuthorFilter = function() {
       // TOD: If the <select> menu was changed to an option that has a value, we first need to hide all the articles, and then show just the ones that match for the author that was selected.
       // Use an "attribute selector"   (!!!!!!! $('.active[id="turtle"])!!!!!!!) to find those articles, and fade (!!!!! use jQuery fade in!!!!!) them in for the reader.
       $('option').hide();
-      $('option'[value="`${authorName}`"];).fadeIn('slow');
+      $('option'[value="`${authorName}`"]).fadeIn('slow');
 
     } else {
       // TODO: If the <select> menu was changed to an option that is blank, we should first show all the articles, except the one article we are using as a template.
-
+      $('option'.fadeIn('slow'));
+      $('option'[value='template']).hide();
     }
     $('#category-filter').val('');
   });
@@ -79,7 +81,7 @@ articleView.setTeasers = function() {
 // TODO: Call all of the above functions, once we are sure the DOM is ready.
 $(document).ready(function() {
 
-articleView();
+articleView.populateFilters();
 
 })
 
