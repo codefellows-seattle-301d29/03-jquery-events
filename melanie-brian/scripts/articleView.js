@@ -83,9 +83,11 @@ articleView.handleMainNav = function() {
   $('.main-nav').on('click', '.tab', function() {
     console.log('clicked');
     $('.tab-content').hide();
+    var dataContent = $(this).data('content');
+    $('section[id="' + dataContent + '"]').show();
   });
   // REVIEW: Now trigger a click on the first .tab element, to set up the page.
-  // $('.main-nav .tab:first').click();
+  $('.main-nav .tab:first').click();
 };
 
 articleView.setTeasers = function() {
