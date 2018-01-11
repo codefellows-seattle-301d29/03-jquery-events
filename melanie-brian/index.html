@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="vendor/styles/icons.css">
   <link rel="stylesheet" href="styles/layout.css">
   <link rel="stylesheet" href="styles/modules.css">
+  <link rel="stylesheet" href="styles/state.css">
   <link rel="icon" type="image/x-icon" href="https://avatars2.githubusercontent.com/u/18607604?v=3&s=200">
 </head>
 <body>
@@ -77,9 +78,9 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="scripts/blogArticles.js"></script>
   <script src="scripts/article.js"></script>
-  <!-- TODO: Link our new script file in. -->
-
+  <!-- DONE: Link our new script file in. -->
+  <script src="scripts/articleView.js"></script>
   <!-- COMMENT: Explain the ordering of your script files. -->
-  <!-- PUT YOUR RESPONSE HERE -->
+  <!-- The articleView file needs to be last. The blogArticle file holds the array of article objects and the article file uses the constructor function to push those onto the DOM. The articleView file is dependent on both of these. -->
 </body>
 </html>
