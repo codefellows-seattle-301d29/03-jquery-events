@@ -14,7 +14,8 @@ HTML for structure and content, CSS for styling, JavaScript for functionality, j
 
 ## Change Log
 09 Jan 18 - Initial revision submitted
-10 Jan 18 - 1.0.1, README.md updated.
+10 Jan 18 20:00 PST - 1.0.1, README.md updated.
+11 Jan 18 11:15 PST - 1.1.0, implemented articleView.js and associated functionality
 
 ## Credits and Collaborations
-We used CSS 
+Credit to the actual writers of the code - Nicole and I added a few features. Stack overflow was - as usual - quite helpful, as was the jQuery official documentation. 
