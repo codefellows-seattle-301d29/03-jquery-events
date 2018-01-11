@@ -51,7 +51,6 @@ articleView.handleAuthorFilter = function() {
 
     } else {
       // TODO: If the <select> menu was changed to an option that is blank, we should first show all the articles, except the one article we are using as a template.
-      
 
     }
     $('#category-filter').val('');
@@ -68,12 +67,22 @@ articleView.handleCategoryFilter = function() {
 
 articleView.handleMainNav = function() {
   // TODO: Add an event handler to .main-nav elements that will power the Tabs feature.
-  // Clicking any .tab element should hide all the .tab-content sections, and then reveal the single .tab-content section that is associated with the clicked .tab element.
-  // So: You need to dynamically build a selector string with the correct ID, based on the data available to you on the .tab element that was clicked.
 
-  // REVIEW: Now trigger a click on the first .tab element, to set up the page.
-  $('.main-nav .tab:first').click();
-};
+    $('.main-nav .tab:last').on('click', function() {
+    // Clicking any .tab element should hide all the .tab-content sections, and then reveal the single .tab-content section that is associated with the clicked .tab element.
+    // So: You need to dynamically build a selector string with the correct ID, based on the data available to you on the .tab element that was clicked.
+  
+    $('article').hide();
+    $(this).fadeIn('slow');
+
+    // REVIEW: Now trigger a click on the first .tab element, to set up the page.
+    $('.main-nav .tab:first').on('click', function() {
+      // $('.main-nav .tab:last').hide();
+      $('article').show();
+      $('.template').hide();
+    });
+  });
+}
 
 articleView.setTeasers = function() {
   // REVIEW: Hide elements beyond the first 2 in any article body.
@@ -87,4 +96,6 @@ articleView.setTeasers = function() {
 $(document).ready(function() {
   articleView.populateFilters();
   articleView.handleAuthorFilter();
+  articleView.handleCategoryFilter();
+  articleView.handleMainNav();
 })
