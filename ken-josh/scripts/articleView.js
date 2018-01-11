@@ -19,7 +19,6 @@ articleView.populateFilters = function() {
       if ($('#author-filter option[value="' + authorName + '"]').length === 0) {
         $('#author-filter').append(optionTag);
       }
-      console.log('x', x);
 
       // REVIEW: Similar to the above, but...
       // Avoid duplicates! We don't want to append the category name if the <select> already has this category as an option!
@@ -45,7 +44,7 @@ articleView.handleAuthorFilter = function() {
       $('option'[value="`${authorName}`"]).fadeIn('slow');
 
     } else {
-      // TODO: If the <select> menu was changed to an option that is blank, we should first show all the articles, except the one article we are using as a template.
+      // TOD: If the <select> menu was changed to an option that is blank, we should first show all the articles, except the one article we are using as a template.
       $('option'.fadeIn('slow'));
       $('option'[value='template']).hide();
     }
