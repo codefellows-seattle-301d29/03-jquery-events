@@ -46,7 +46,7 @@ articleView.handleAuthorFilter = function() {
       // Use an "attribute selector" to find those articles, and fade them in for the reader.
       console.log($(this).val());
       $('article').hide();
-      $('article[data-author=$(this).val()]').addClass('display').fadeIn('slow');
+      $('article[data-author="' + $(this).val() + '"]').addClass('display').fadeIn('slow');
     } else {
       // TODO: If the <select> menu was changed to an option that is blank, we should first show all the articles, except the one article we are using as a template.
       $('article').addClass('display');
