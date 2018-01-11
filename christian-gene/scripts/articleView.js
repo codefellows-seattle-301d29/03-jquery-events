@@ -51,7 +51,9 @@ articleView.handleAuthorFilter = function() {
 
     } else {
       // TODO: If the <select> menu was changed to an option that is blank, we should first show all the articles, except the one article we are using as a template.
-      
+      $('article').fadeIn('slow');
+      $('article').show();
+      $('.template').hide();
 
     }
     $('#category-filter').val('');
@@ -64,7 +66,10 @@ articleView.handleCategoryFilter = function() {
       $('article').hide();
       $('article[data-category="' + $(this).val() + '"]').fadeIn('slow');
     } else {
-
+      $('article').fadeIn('slow');      
+      $('article').show();
+      $('.template').hide();
+      
     }
     $('author-filter').val('');
   })
@@ -76,6 +81,7 @@ articleView.handleCategoryFilter = function() {
 };
 
 articleView.handleMainNav = function() {
+  $('.main-nav').on('click', )
   // TODO: Add an event handler to .main-nav elements that will power the Tabs feature.
   // Clicking any .tab element should hide all the .tab-content sections, and then reveal the single .tab-content section that is associated with the clicked .tab element.
   // So: You need to dynamically build a selector string with the correct ID, based on the data available to you on the .tab element that was clicked.
