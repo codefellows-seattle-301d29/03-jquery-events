@@ -1,6 +1,6 @@
 # jQuery and the DOM
 
-**Author**: Bessie Arino
+**Author**: Alex Bowers
 **Version**: 1.0.0 (increment the patch/fix version number up if you make more commits past your first submission)
 
 ## Overview
@@ -15,7 +15,12 @@ Then we started going through the TODOs in the .js files.
 We are using javascript, html, .css and jquery to build this app.
 
 ## Change Log
-We did all changes to the DOM in one add and commit. we ttested the application as each feature was successfully implemented. 
+Added normalize.css
+Added jQuery.css
+
 
 ## Credits and Collaborations
-Jay Adams was a Collaborator
+Bessie Arino was a Collaborator
+normalize.css
+jQuery
+Icon Moon
