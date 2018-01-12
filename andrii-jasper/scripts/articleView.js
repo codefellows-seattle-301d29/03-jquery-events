@@ -85,9 +85,13 @@ articleView.handleMainNav = function() {
   // $('.main-nav.tab:first').click(function(){ $('article').fadeIn(); });
 
   // $('.main-nav.tab:second').click(function(){ $('article').hide(); });
-
-
-  $('.main-nav.tab:first').on('click', function(){$('.tab-content').hide();} )
+  $('.main-nav .tab').on('click', function(){
+    $('.tab-content').hide();
+    var tabName = $(this).attr('data-content');
+    $(`#${tabName}`).show();
+  });
+  
+  // $('.main-nav.tab:first').on('click', function(){$('.tab-content').hide();} )
 
 };
 
