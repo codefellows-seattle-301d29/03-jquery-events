@@ -22,6 +22,10 @@ articleView.populateFilters = function() {
         $('#author-filter').append(optionTag);
       }
 
+      // if ($(`#author-filter option[value="${authorName}"]`).length === 0) {
+      //   $('#author-filter').append(optionTag);
+      // }
+
       // REVIEW: Similar to the above, but...
       // Avoid duplicates! We don't want to append the category name if the <select> already has this category as an option!
       category = $(this).attr('data-category');
@@ -46,7 +50,7 @@ articleView.handleAuthorFilter = function() {
       // Use an "attribute selector" to find those articles, and fade them in for the reader.
       console.log($(this).val());
       $('article').hide();
-      $('article[data-author="' + $(this).val() + '"]').addClass('display').fadeIn('slow');
+      $(`article[data-author="${$(this).val()}"]`).addClass('display').fadeIn('slow');
     } else {
       // DONE: If the <select> menu was changed to an option that is blank, we should first show all the articles, except the one article we are using as a template.
       $('article').show();
@@ -80,7 +84,8 @@ articleView.handleMainNav = function() {
   // Clicking any .tab element should hide all the .tab-content sections, and then reveal the single .tab-content section that is associated with the clicked .tab element.
   // So: You need to dynamically build a selector string with the correct ID, based on the data available to you on the .tab element that was clicked.
 
-  $('.main-nav').on('click', '.tab', function() {
+  $('.main-nav').on('click', '.tab', function(e) {
+    e.preventDefault();
     console.log('clicked');
     $('.tab-content').hide();
     var dataContent = $(this).data('content');
@@ -98,8 +103,8 @@ articleView.setTeasers = function() {
   // DONE: Add an event handler to reveal all the hidden elements, when the .read-on link is clicked. You can go ahead and hide the "Read On" link once it has been clicked. Be sure to prevent the default link-click action!
   // Ideally, we'd attach this as just one event handler on the #articles section, and let it process (in other words... delegate) any .read-on clicks that happen within child nodes.
 
-  $('article').on('click', '.read-on', function() {
-    event.preventDefault();
+  $('article').on('click', '.read-on', function(e) {
+    e.preventDefault();
     var $article = $(this).parent();
     $(this).addClass('display-none');
     $article.children('section').children('p').css('display','block');
