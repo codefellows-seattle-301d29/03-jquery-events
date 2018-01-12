@@ -14,7 +14,7 @@ articleView.populateFilters = function() {
       authorName = $(this).attr('data-author');
 
       // TODO: Refactor this concatenation using a template literal.
-      optionTag = `<option value=${authorName}> ${authorName}</option>`;
+      optionTag = `<option value="${authorName}"> ${authorName}</option>`;
 
       if ($(`#author-filter option[value="${authorName}"]`).length === 0) {
         $('#author-filter').append(optionTag);
@@ -61,9 +61,9 @@ articleView.handleCategoryFilter = function() {
   // Be sure to reset the #author-filter while you are at it!
   $('#category-filter').on('change', function() {
 
-    if ($(this).val()) {
-      $('article').hide();
-      $("article[data-category=" + this.val() + "]").fadeIn();
+    if ($(this).val()) {  $('article').hide();
+      $(`article[data-category="${$(this).val()}"]`).fadeIn();
+
       
 
     } else {
@@ -85,7 +85,10 @@ articleView.handleMainNav = function() {
   // $('.main-nav.tab:first').click(function(){ $('article').fadeIn(); });
 
   // $('.main-nav.tab:second').click(function(){ $('article').hide(); });
-  $('.main-nav.tab:first').on('click', 'tab', function(){$('article').hide();} )
+
+
+  $('.main-nav.tab:first').on('click', function(){$('.tab-content').hide();} )
+
 };
 
 articleView.setTeasers = function() {
