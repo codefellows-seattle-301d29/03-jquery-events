@@ -16,6 +16,9 @@ hr {
   margin: 1em;
   width: 80%;
 }
+.template {
+  display: none;
+}
 
 /*TEXT STYLES
 =======================================*/
