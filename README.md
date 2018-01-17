@@ -84,18 +84,23 @@ _Your README.md must include:_
 ## Overview
 <!-- Provide a high level overview of what this application is and why you are building it, beyond the fact that it's an assignment for a Code Fellows 301 class. (i.e. What's your problem domain?) -->
 
+<!-- We have built this application to learn about using jQuery filters and event delegation. -->
+
 ## Getting Started
 <!-- What are the steps that a user must take in order to build this app on their own machine and get it running? -->
+
+<!-- First they would have to set up the filters for categories and authors. Then they would have to setup the controls for the main navigation to show and hide itself. -->
 
 ## Architecture
 <!-- Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information. -->
 
+<!-- We had to use event delegations, template literals, and filters. We used jQuery for our library. We also used specific selectors such as nth-of-type. -->
+
 ## Change Log
 <!-- Use this are to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an examples:
 
-01-01-2001 4:59pm - Application now has a fully-functional express server, with GET and POST routes for the book resource.
-
-## Credits and Collaborations
-<!-- Give credit (and a link) to other people or resources that helped you build this application. -->
--->
+01-11-2018 9:00am: Started with the filters
+01-11-2018 10:00am: Filters working and started on hiding the articles.
+01-11-2018 12:00am: Articles hidden. Started on working on nav buttons home/about hiding.
+01-11-2018 1:30:00am: Finished project. Sendig it in. Pushing up to master then to canvas
 ```
