@@ -35,6 +35,8 @@ articleView.populateFilters = function() {
 };
 
 articleView.handleAuthorFilter = function() {
+  $('article .template').hide();
+  
   $('#author-filter').on('change', function() {
     // REVIEW: Inside this function, "this" is the element that triggered the event handler function we are defining. "$(this)" is using jQuery to select that element (analogous to event.target that we have seen before), so we can chain jQuery methods onto it.
     if ($(this).val()) {
@@ -45,7 +47,6 @@ articleView.handleAuthorFilter = function() {
     } else {
       // TODO: If the <select> menu was changed to an option that is blank, we should first show all the articles, except the one article we are using as a template.
       $('article').fadeIn();
-      $('article .template').hide();
       
     }
     $('#category-filter').val('');
@@ -57,6 +58,7 @@ articleView.handleCategoryFilter = function() {
   // When an option with a value is selected, hide all the articles, then reveal the matches.
   // When the blank (default) option is selected, show all the articles, except for the template.
   // Be sure to reset the #author-filter while you are at it!
+  $('.template').hide();
   $('#category-filter').on('change', function(){
     if($(this).val()) {
       $('article').hide();
@@ -74,8 +76,11 @@ articleView.handleMainNav = function() {
   // So: You need to dynamically build a selector string with the correct ID, based on the data available to you on the .tab element that was clicked.
 
   // REVIEW: Now trigger a click on the first .tab element, to set up the page.
+  $('#about').hide();
+  
   $('.main-nav .tab:first').on('click', function(){
     $('.tab-content').hide();
+    
     $('#articles').show();
   });
 
