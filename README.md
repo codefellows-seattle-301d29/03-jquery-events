@@ -78,24 +78,32 @@ _Your README.md must include:_
 ```md
 # Project Name
 
-**Author**: Your Name Goes Here
+**Author**: Wyatt Pefley
 **Version**: 1.0.0 (increment the patch/fix version number up if you make more commits past your first submission)
 
 ## Overview
-<!-- Provide a high level overview of what this application is and why you are building it, beyond the fact that it's an assignment for a Code Fellows 301 class. (i.e. What's your problem domain?) -->
+This is an application that filters blog posts based on user input using Jquery and JavaScript/
 
 ## Getting Started
-<!-- What are the steps that a user must take in order to build this app on their own machine and get it running? -->
+1. Fork repo on GitHub.
+2. Copy repo to local machine.
+3. read through code to understand what each piece is doing.
+4. Read commented instructions and follow them.
+5. ACP
+6. Use Jquery cheat sheet and Jquery Docs as resources
 
 ## Architecture
-<!-- Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information. -->
+This application uses HTML, CSS, and JavaScript with the Jquery library imported.
+We use HTML and CSS for the front end work, and use Javascript and Jquery for back and work and DOM traversal, selection, and manipulation.
 
 ## Change Log
 <!-- Use this are to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an examples:
 
-01-01-2001 4:59pm - Application now has a fully-functional express server, with GET and POST routes for the book resource.
-
+9:00 - began reading through codebase
+9:10 - Began commenting where the instructions said
+9:20 - Began creating template literals
+10:00 - Adding event handlers
 ## Credits and Collaborations
-<!-- Give credit (and a link) to other people or resources that helped you build this application. -->
+Wyatt Pefley
 -->
 ```
